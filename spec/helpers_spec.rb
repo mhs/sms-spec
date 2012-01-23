@@ -58,7 +58,7 @@ describe TextSpec::Helpers do
     describe "when there are messages" do
       let(:message1) { Message.new :number => "5555555513", :body => "Hi" }
       let(:message2) { Message.new :number => "5555555512", :body => "Hello there" }
-     
+
       before do
         add_message message1
         add_message message2
@@ -69,7 +69,7 @@ describe TextSpec::Helpers do
           current_text_message.should be_nil
         end
       end
-      
+
       describe "and a message has been opened" do
         before do
           open_last_text_message_for("5555555513")

@@ -5,6 +5,7 @@ module TextSpec
     extend TextSpec::Util
 
     def self.add_message message
+      @@messages ||= []
       @@messages << message
     end
 
