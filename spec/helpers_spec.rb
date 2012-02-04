@@ -50,6 +50,10 @@ describe TextSpec::Helpers do
 
   describe ".current_text_message" do
     describe "when there are not text messages yet" do
+    before :each do
+      TextSpec::Data.clear_messages
+    end
+
       it "returns nil" do
         current_text_message.should be_nil
       end

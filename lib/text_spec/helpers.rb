@@ -3,7 +3,7 @@ require 'forwardable'
 module TextSpec
   module Helpers
     extend Forwardable
-
+    
     def_delegators :"TextSpec::Data", 
       :messages,
       :add_message,
