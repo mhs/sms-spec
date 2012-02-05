@@ -1,4 +1,3 @@
-# This generator adds email steps to the step definitions directory
 require 'rails/generators'
 
 module TextSpec
