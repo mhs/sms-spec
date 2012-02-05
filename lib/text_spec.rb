@@ -12,4 +12,7 @@ module TextSpec
   def self.driver=(driver_sym)
     require "text_spec/drivers/#{driver_sym.to_s}"
   end
+
+  TextSpec.driver = :"twilio-ruby"
 end
+  
