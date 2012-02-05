@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Chris Rittersdorf"]
   s.email       = ["manlycode@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Test SMS interactions with RSpec and Cucumber}
+  s.description = %q{Text Spec gives you an RSpec DSL and Cucumber steps to test SMS interactions (currently only usint the twilio-rb gem).}
 
   s.rubyforge_project = "text_spec"
 

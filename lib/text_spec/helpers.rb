@@ -11,6 +11,7 @@ module TextSpec
       :current_number,
       :clear_messages,
       :current_text_message,
+      :messages_for,
       :open_last_text_message_for
   end
 end

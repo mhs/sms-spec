@@ -31,8 +31,12 @@ module TextSpec
     end
 
     def self.open_last_text_message_for(phone_number)
-      message = @@messages.select {|m| m.number == sanitize(phone_number)}.first
+      message = messages_for(phone_number).first
       @@current_text_message = @@messages.delete(message)
+    end
+
+    def self.messages_for(phone_number)
+      @@messages.select {|m| m.number == sanitize(phone_number)}
     end
 
   end
