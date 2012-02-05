@@ -1,0 +1,6 @@
+Description:
+    Creates text_message_steps.rb in your cucumber step_definitions.
+    
+Examples:
+    `script/rails generate text_spec:steps`
+
