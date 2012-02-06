@@ -1,6 +1,7 @@
 # Text Spec
 
-An RSpec DSL and Cucumber steps to test
+An RSpec DSL and Cucumber steps to test SMS interactions with your
+Ruby on Rails application.
 
 ##Setup
 ###Gem Setup
