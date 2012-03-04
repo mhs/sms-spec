@@ -90,7 +90,35 @@ describe TextSpec::Helpers do
         end
       end
     end
+  end
 
+  describe ".twiml_message" do
+    context "with defaults" do
+      let(:message) {
+        twiml_message("+16165559982", "Ahoy!")
+      }
+
+      it "modifies the From attribute" do
+        message["From"].should eql("+16165559982")
+      end
+
+      it "Modifies the Body attribute" do
+        message["Body"].should eql("Ahoy!")
+      end
+    end
+
+    describe "Overriding options" do
+      let(:message) {
+        twiml_message("+16165559982", "Ahoy!", "ToZip" => "49506", "ToCity" => "Detroit")
+      }
+
+      it "overrides the specified attributes" do
+        message["ToZip"].should eql("49506")
+        message["ToCity"].should eql("Detroit")
+        message["Body"].should eql("Ahoy!")
+        message["From"].should eql("+16165559982")
+      end
+    end
   end
 
 end

@@ -1,5 +1,5 @@
-require File.join(File.dirname(__FILE__), *%w[spec_helper])
 require 'twilio-ruby'
+require File.join(File.dirname(__FILE__), *%w[spec_helper])
 
 describe TextSpec do
   include TextSpec::Helpers
@@ -7,7 +7,6 @@ describe TextSpec do
   before :each do
     TextSpec::Data.clear_messages
   end
-
 
   describe "the twilio-ruby driver" do
     it "is assignable" do
