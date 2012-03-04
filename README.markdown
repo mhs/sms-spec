@@ -17,8 +17,8 @@ end
 Add the folloing to you env.rb file:
 
 <pre>
-require 'email_spec'
-require 'email_spec/cucubmber'
+require 'text_spec'
+require 'text_spec/cucubmber'
 </pre>
 
 This loads the text_spec RSpec helpers into your cucumber wold. Then,
