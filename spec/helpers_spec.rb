@@ -1,10 +1,10 @@
 require File.join(File.dirname(__FILE__), *%w[spec_helper])
 
-describe TextSpec::Helpers do
-  include TextSpec::Helpers
+describe SmsSpec::Helpers do
+  include SmsSpec::Helpers
 
   before :each do
-    TextSpec::Data.clear_messages
+    SmsSpec::Data.clear_messages
   end
 
   describe ".messages" do
@@ -51,7 +51,7 @@ describe TextSpec::Helpers do
   describe ".current_text_message" do
     describe "when there are not text messages yet" do
     before :each do
-      TextSpec::Data.clear_messages
+      SmsSpec::Data.clear_messages
     end
 
       it "returns nil" do

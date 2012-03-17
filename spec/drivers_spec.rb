@@ -1,16 +1,16 @@
 require 'twilio-ruby'
 require File.join(File.dirname(__FILE__), *%w[spec_helper])
 
-describe TextSpec do
-  include TextSpec::Helpers
+describe SmsSpec do
+  include SmsSpec::Helpers
 
   before :each do
-    TextSpec::Data.clear_messages
+    SmsSpec::Data.clear_messages
   end
 
   describe "the twilio-ruby driver" do
     it "is assignable" do
-      TextSpec.driver = :"twilio-ruby"
+      SmsSpec.driver = :"twilio-ruby"
     end
 
     it "intercepts calls to twilio's sms client" do

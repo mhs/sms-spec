@@ -1,8 +1,8 @@
 require File.join(File.dirname(__FILE__), *%w[spec_helper])
 
-describe TextSpec::Matchers do
-  include TextSpec::Helpers
-  include TextSpec::Matchers
+describe SmsSpec::Matchers do
+  include SmsSpec::Helpers
+  include SmsSpec::Matchers
 
   let(:mobile_number) { "5555555512" }
 
@@ -38,7 +38,7 @@ describe TextSpec::Matchers do
   end
 
   describe ".have_text_messages" do
-    include TextSpec::Matchers
+    include SmsSpec::Matchers
 
     describe "when the mobile device has no text messages" do
       it "should not match" do

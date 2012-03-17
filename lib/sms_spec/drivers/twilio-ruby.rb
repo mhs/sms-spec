@@ -4,7 +4,7 @@ class Twilio::REST::Client
   end
 
   class Messages
-    include TextSpec::Helpers
+    include SmsSpec::Helpers
 
     def create(opts={})
       to = opts[:to]

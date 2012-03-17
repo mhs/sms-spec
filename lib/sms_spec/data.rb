@@ -1,8 +1,8 @@
-require 'text_spec/util'
+require 'sms_spec/util'
 
-module TextSpec
+module SmsSpec
   class Data
-    extend TextSpec::Util
+    extend SmsSpec::Util
 
     def self.add_message message
       @@messages ||= []

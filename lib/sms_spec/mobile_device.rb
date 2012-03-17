@@ -5,6 +5,6 @@ class MobileDevice
   end
 
   def messages
-    TextSpec::Data.messages.select {|d| d.number == @number}
+    SmsSpec::Data.messages.select {|d| d.number == @number}
   end
 end

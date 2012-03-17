@@ -1,10 +1,10 @@
 require 'forwardable'
 
-module TextSpec
+module SmsSpec
   module Helpers
     extend Forwardable
     
-    def_delegators :"TextSpec::Data", 
+    def_delegators :"SmsSpec::Data", 
       :messages,
       :add_message,
       :set_current_number,
