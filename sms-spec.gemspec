@@ -7,11 +7,11 @@ Gem::Specification.new do |s|
   s.version     = SmsSpec::VERSION
   s.authors     = ["Chris Rittersdorf"]
   s.email       = ["manlycode@gmail.com"]
-  s.homepage    = "https://github.com/mhs/sms_spec"
+  s.homepage    = "https://github.com/mhs/sms-spec"
   s.summary     = %q{Test SMS interactions with RSpec and Cucumber}
   s.description = %q{Text Spec gives you an RSpec DSL and Cucumber steps to test SMS interactions.}
 
-  s.rubyforge_project = "sms_spec"
+  s.rubyforge_project = "sms-spec"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
