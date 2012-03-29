@@ -34,3 +34,8 @@ end
 Then /^I should see "([^"]*)" in the text message body$/ do |content|
   current_text_message.should have_body(content)
 end
+
+Then /^I should see the following in the text message body:$/ do |content|
+  current_text_message.should have_body(content)
+end
+
