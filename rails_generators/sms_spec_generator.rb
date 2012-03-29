@@ -3,7 +3,7 @@ base = defined?(Rails) ? Rails::Generator::Base : RubiGen::Base
 class SmsSpecGenerator < base
   def manifest
     m.directory 'features/step_definitions'
-    m.file 'text_message_steps.rb', 'features/step_definitions/text_message_steps.rb'
+    m.file 'sms_steps.rb', 'features/step_definitions/sms_steps.rb'
   end
 
   protected
