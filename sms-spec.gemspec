@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["manlycode@gmail.com"]
   s.homepage    = "https://github.com/mhs/sms-spec"
   s.summary     = %q{Test SMS interactions with RSpec and Cucumber}
-  s.description = %q{Text Spec gives you an RSpec DSL and Cucumber steps to test SMS interactions.}
+  s.description = %q{SMS Spec gives you an RSpec DSL and Cucumber steps to test SMS interactions.}
 
   s.rubyforge_project = "sms-spec"
 
