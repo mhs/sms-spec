@@ -1,6 +1,7 @@
 class Twilio::REST::Client
 
   def initialize(account_sid, auth_token)
+    $account_sid = account_sid
   end
 
   class Messages
@@ -26,6 +27,8 @@ class Twilio::REST::Client
   end
 
   def account
-    return Account.new
+    account = Account.new
+    account.class.send(:define_method, :sid, lambda { $account_sid })
+    account
   end
 end

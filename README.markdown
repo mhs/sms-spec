@@ -7,10 +7,10 @@ Currently this gem only supports testing SMS messageing using the
 [twilio-ruby](https://github.com/twilio/twilio-ruby) gem.
 
 ##Setup
-Add the sms\_spec gem to your Gemfile:
+Add the sms-spec gem to your Gemfile:
 <pre>
 group :test do
-  gem 'sms_spec'
+  gem 'sms-spec'
 end
 </pre>
 
