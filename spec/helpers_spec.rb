@@ -17,7 +17,7 @@ describe SmsSpec::Helpers do
     describe "after a message has been sent" do
       it "adds a message" do
         lambda {
-          add_message Message.new :number => "5555555512", :body => "Hello there"
+          add_message SmsSpec::Message.new :number => "5555555512", :body => "Hello there"
         }.should change(messages, :count).by(1)
       end
     end
@@ -40,9 +40,9 @@ describe SmsSpec::Helpers do
 
   describe ".clear_sms_messages" do
     it "removes all messages" do
-      add_message Message.new :number => "5555555512", :body => "Hello there"
-      add_message Message.new :number => "5555555512", :body => "Hello there"
-      add_message Message.new :number => "5555555512", :body => "Hello there"
+      add_message SmsSpec::Message.new :number => "5555555512", :body => "Hello there"
+      add_message SmsSpec::Message.new :number => "5555555512", :body => "Hello there"
+      add_message SmsSpec::Message.new :number => "5555555512", :body => "Hello there"
 
       messages.should have(3).messages
     end
@@ -60,8 +60,8 @@ describe SmsSpec::Helpers do
     end
 
     describe "when there are messages" do
-      let(:message1) { Message.new :number => "5555555513", :body => "Hi" }
-      let(:message2) { Message.new :number => "5555555512", :body => "Hello there" }
+      let(:message1) { SmsSpec::Message.new :number => "5555555513", :body => "Hi" }
+      let(:message2) { SmsSpec::Message.new :number => "5555555512", :body => "Hello there" }
 
       before do
         add_message message1
