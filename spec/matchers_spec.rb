@@ -42,16 +42,16 @@ describe SmsSpec::Matchers do
 
     describe "when the mobile device has no text messages" do
       it "should not match" do
-        device = MobileDevice.new(:number => mobile_number)
+        device = SmsSpec::MobileDevice.new(:number => mobile_number)
         have_text_messages.should_not match(device)
       end
     end
 
     describe "when the mobile device has text messages" do
       it "should match" do
-        add_message Message.new(:number => mobile_number, :body => "something")
+        add_message SmsSpec::Message.new(:number => mobile_number, :body => "something")
 
-        device = MobileDevice.new(mobile_number)
+        device = SmsSpec::MobileDevice.new(mobile_number)
         have_text_messages.should match(device)
       end
     end
@@ -60,7 +60,7 @@ describe SmsSpec::Matchers do
   describe ".have_body" do
     describe "when bodies match" do
       it "matches" do
-        message = Message.new(:number => mobile_number, :body => "something")
+        message = SmsSpec::Message.new(:number => mobile_number, :body => "something")
 
         have_body("something").should match(message)
       end
