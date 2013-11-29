@@ -121,4 +121,31 @@ describe SmsSpec::Helpers do
     end
   end
 
+  describe ".clkatel_message" do
+    context "with defaults" do
+      let(:message) {
+        clkatel_message("+16165559982", "Ahoy!")
+      }
+
+      it "modifies the From attribute" do
+        message["From"].should eql("+16165559982")
+      end
+
+      it "Modifies the Body attribute" do
+        message["Text"].should eql("Ahoy!")
+      end
+    end
+
+    describe "Overriding options" do
+      let(:message) {
+        clkatel_message("+16165559982", "Ahoy!")
+      }
+
+      it "overrides the specified attributes" do
+        message["Text"].should eql("Ahoy!")
+        message["From"].should eql("+16165559982")
+      end
+    end
+  end
+
 end

@@ -33,6 +33,13 @@ module SmsSpec
         "From"=> from,
         "FromZip"=>"49507"
       }
+    end
+
+    def clkatel_message(from, text, opts={})
+      base_options = {
+        "From"=> from,
+        "Text" => text
+      }
 
       base_options.merge! opts
     end
