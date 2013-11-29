@@ -4,7 +4,8 @@ An RSpec DSL and Cucumber steps to test SMS interactions with your
 Ruby on Rails application.
 
 Currently this gem only supports testing SMS messageing using the
-[twilio-ruby](https://github.com/twilio/twilio-ruby) gem.
+[twilio-ruby](https://github.com/twilio/twilio-ruby) and
+[lookout-clickatell](https://github.com/lookout/clickatell) gem.
 
 ##Setup
 Add the sms-spec gem to your Gemfile:
