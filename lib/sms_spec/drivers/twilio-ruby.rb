@@ -10,7 +10,7 @@ class Twilio::REST::Client
     def create(opts={})
       to = opts[:to]
       body = opts[:body]
-      add_message Message.new(:number => to, :body => body)
+      add_message SmsSpec::Message.new(:number => to, :body => body)
     end
   end
 
@@ -23,6 +23,10 @@ class Twilio::REST::Client
   class Account
     def sms
       return Sms.new
+    end
+
+    def messages
+      return Messages.new
     end
     ##
     # Supports Client call
