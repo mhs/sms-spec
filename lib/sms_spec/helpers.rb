@@ -14,27 +14,23 @@ module SmsSpec
       :messages_for,
       :open_last_text_message_for
 
-    def twiml_message(from, body, opts={})
+    def twiml_message(from,to,body,asid)
       base_options = {
-        "AccountSid"=>"1234567812345678",
-        "Body"=> body,
-        "ToZip"=>"94949",
-        "FromState"=>"MI",
-        "ToCity"=>"NOVATO",
-        "SmsSid"=>"1234567812345678",
-        "ToState"=>"CA",
-        "To"=>"8155552671",
-        "ToCountry"=>"US",
-        "FromCountry"=>"US",
-        "SmsMessageSid"=>"123456712345671234567",
-        "ApiVersion"=>"2008-08-01",
-        "FromCity"=>"GRAND RAPIDS",
-        "SmsStatus"=>"received",
+        "MessageSid"=>rand.to_s[2..34].to_s.rjust(34,'0'),
+        "AccountSid"=>asid,
         "From"=> from,
-        "FromZip"=>"49507"
-      }
-
-      base_options.merge! opts
+        "To"=>to,
+        "Body"=> body,
+        "NumMedia"=> 0,
+        "ToCity"=>"NOVATO",
+        "ToZip"=>"94949",
+        "ToState"=>"CA",
+        "ToCountry"=>"US",
+        "FromCity"=>"GRAND RAPIDS",
+        "FromState"=>"MI",
+        "FromZip"=>"49501",
+        "FromCountry"=>"US"
+        }
     end
   end
 end

@@ -61,7 +61,7 @@ class Twilio::REST::Client
                 "sid"=> "QR3d631fb8a0bd7c35e1cc6912bf0622b1",
                 "account_sid"=> "#{$account_sid}",
                 "friendly_name"=> "#{friendly_number}",
-                "phone_number"=>"#{number}",
+                "phone_number"=>"#{number[:phone_number]}",
                 "voice_url"=> "",
                 "voice_method"=> "POST",
                 "voice_fallback_url"=> "",
