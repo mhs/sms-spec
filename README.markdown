@@ -40,7 +40,7 @@ end
 </pre>
 
 ## Cucumber
-Add the folloing to you env.rb file:
+Add the following to your env.rb file:
 
 <pre>
 require 'sms_spec'
