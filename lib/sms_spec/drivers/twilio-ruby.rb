@@ -48,9 +48,14 @@ class Twilio::REST::Client
   end
 
   class PhoneNumbers
+
+
+    def list(options)
+      []
+    end
     
     def get(country)
-     return  CountryNumbers.new   
+     return  CountryNumbers.new
     end
     
     def create(number)
